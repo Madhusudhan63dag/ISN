@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 16s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
