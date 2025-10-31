@@ -14,78 +14,79 @@ const BlueIcon = () => (
 
 const cards = [
   {
-    title: "Customer Ordering & Helpline",
+    title: "Order Placement & Support",
     border: "orange",
     icon: <OrangeIcon />,
     points: [
-      "Live call center order placement",
-      "Real-time customer support",
-      "Friendly assistance with every call"
+      "Dedicated call center for easy ordering",
+      "Instant assistance for all queries",
+      "Personalized support every step of the way"
     ],
-    desc: "Seamless buying experience powered by our expert BPO team.",
+    desc: "A hassle-free purchase workflow delivered by friendly experts.",
     link: "#"
   },
   {
-    title: "Media & Digital Campaigns",
+    title: "Digital Marketing & Media",
     border: "blue",
     icon: <BlueIcon />,
     points: [
-      "Data-driven digital ads",
-      "Multi-channel product promotion",
-      "Brand growth & lead generation"
+      "Targeted campaigns for product visibility",
+      "Omni-channel strategies to maximize reach",
+      "Proven lead generation and brand building"
     ],
-    desc: "Cutting-edge marketing to boost product success—across platforms.",
+    desc: "Drive awareness, engagement, and growth with smart digital promotion.",
     link: "#"
   },
   {
-    title: "Product Distribution & Fulfillment",
+    title: "Product Delivery & Logistics",
     border: "orange",
     icon: <OrangeIcon />,
     points: [
-      "Efficient order processing",
-      "Pan-India logistics",
-      "Inventory & supply management"
+      "Rapid nationwide delivery network",
+      "Robust inventory and dispatch systems",
+      "End-to-end order fulfillment"
     ],
-    desc: "Reliable delivery and backend support for every brand.",
+    desc: "Your products safely delivered, on-time, every time across India.",
     link: "#"
   },
   {
-    title: "Customer Care Excellence",
+    title: "After-Sales Customer Care",
     border: "orange",
     icon: <OrangeIcon />,
     points: [
-      "24/7 support lines",
-      "Issue resolution & follow-up",
-      "Loyalty-building service"
+      "Round-the-clock helplines",
+      "Efficient issue resolution",
+      "Building loyalty through excellent service"
     ],
-    desc: "Always available to help, solve, and delight your customers.",
+    desc: "Continuous support for every customer—before, during, and after purchase.",
     link: "#"
   },
   {
-    title: "Brand Partnership & Growth",
+    title: "Brand Partnerships",
     border: "blue",
     icon: <BlueIcon />,
     points: [
-      "Onboarding new products",
-      "Performance analytics",
-      "Long-term partner success"
+      "Smooth integration for new brands",
+      "Growth analytics and performance tracking",
+      "Sustained collaboration for market leadership"
     ],
-    desc: "Work with us to scale your wellness and lifestyle products.",
+    desc: "Scale faster with tailored partnership programs and actionable insights.",
     link: "#"
   },
   {
-    title: "Compliance & Trust Assurance",
+    title: "Quality & Compliance",
     border: "orange",
     icon: <OrangeIcon />,
     points: [
-      "Certified, government-approved products",
-      "Transparent operations",
-      "Customer-first business ethics"
+      "Certified and regulatory-approved products",
+      "Full transparency at every stage",
+      "Ethics-driven customer relationships"
     ],
-    desc: "Build lasting trust with quality standards and clear communication.",
+    desc: "Earn trust and repeat business with a commitment to safety and integrity.",
     link: "#"
   }
 ];
+
 
 const cardBorder = {
   orange: "border-[#ff8733]",
@@ -93,7 +94,7 @@ const cardBorder = {
 };
 
 const CardGrid = () => (
-  <section className="w-full bg-white py-14 px-5 flex flex-col items-center">
+  <section className="w-full bg-white py-1 px-5 flex flex-col items-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-[#0074E4] text-center mb-2">
       Everything You Need for Product Success
     </h2>
@@ -101,31 +102,38 @@ const CardGrid = () => (
       From digital marketing and call center support to pan-India distribution and customer care, Israelites Shopping Network delivers seamless solutions that help your products reach, convert, and delight customers everywhere.
     </p>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-6xl w-full">
-      {cards.map((card, idx) => (
-        <div key={idx} className={`relative rounded-2xl border-2 ${cardBorder[card.border]} bg-white shadow-md p-7 h-full flex flex-col transition-shadow hover:shadow-lg`}>
-          <h3 className="text-[#0074E4] font-bold text-lg mb-2">{card.title}</h3>
-          <p className="text-[#0074E4] text-sm mb-5">{card.desc}</p>
-          <ul className="mb-6 list-disc pl-5">
-            {card.points.map((pt, idy) => (
-              <li key={idy} className="font-medium text-[#193a6a]">
-                {pt}
-              </li>
-            ))}
-          </ul>
-          {/* <a
-            href={card.link}
-            className="mt-auto text-[#193a6a] font-semibold hover:underline flex items-center"
+      {cards.map((card, idx) => {
+        // Set unique hover classes by card index
+        let hoverClass = "";
+        if (idx === 0) hoverClass = "hover:scale-105 hover:-rotate-2"; // pop up, slight rotate
+        else if (idx === 1) hoverClass = "hover:scale-105 hover:translate-x-2"; // pop right
+        else if (idx === 2) hoverClass = "hover:scale-105 hover:-translate-x-2"; // pop left
+        else if (idx === 3) hoverClass = "hover:scale-105 hover:-rotate-3"; // pop up, bigger rotate
+        else if (idx === 4) hoverClass = "hover:scale-105 hover:translate-y-2"; // pop down
+        else hoverClass = "hover:scale-105 hover:shadow-2xl"; // default pop + shadow
+
+        return (
+          <div
+            key={idx}
+            className={`relative rounded-2xl border-2 ${cardBorder[card.border]} bg-white shadow-md p-7 h-full flex flex-col transition-all duration-300 ease-in-out group ${hoverClass}`}
+            style={{ willChange: "transform" }}
           >
-            Learn More
-            <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a> */}
-        </div>
-      ))}
+            <h3 className="text-[#0074E4] font-bold text-lg mb-2">{card.title}</h3>
+            <p className="text-[#0074E4] text-sm mb-5">{card.desc}</p>
+            <ul className="mb-6 list-disc pl-5">
+              {card.points.map((pt, idy) => (
+                <li key={idy} className="font-medium text-[#193a6a]">
+                  {pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
     </div>
   </section>
 );
+
 
 const Services = () => {
   return (

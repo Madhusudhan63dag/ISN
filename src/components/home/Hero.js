@@ -4,7 +4,6 @@ import mobileBanner from '../../assets/banner1.webp'
 // Example logos (update paths as needed)
 import one from '../../assets/logos/sacredrelm.webp'
 import two from '../../assets/logos/beyond_slim.webp'
-import three from '../../assets/logos/camph_airr.webp'
 import four from '../../assets/logos/d-52_diabetes_care.webp'
 import five from '../../assets/logos/dr_alco_free.webp'
 import six from '../../assets/logos/drjoints.webp'
@@ -17,10 +16,11 @@ import ten from '../../assets/logos/sriastroveda.webp'
 
 
 const logos = [
-  one, two, three, four,
+  one, two, four,
   five, ten, six, seven, eight,
-  nine,
-  one, two, three, four,
+  nine, one, two, four,
+  five, ten, six, seven, eight,
+  nine,one, two, four,
   five, ten, six, seven, eight,
   nine
 ]
