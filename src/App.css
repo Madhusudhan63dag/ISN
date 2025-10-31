@@ -12,14 +12,14 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  background: transparent;
+  /* background: transparent; */
 }
 .marquee-content {
   display: flex;
   gap: 2rem;
-  animation: marquee 16s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 @keyframes marquee {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }

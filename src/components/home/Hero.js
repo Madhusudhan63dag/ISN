@@ -2,23 +2,27 @@ import React from 'react'
 import desktopBanner from '../../assets/banner2.png'
 import mobileBanner from '../../assets/banner1.webp'
 // Example logos (update paths as needed)
-import meeshoLogo from '../../assets/logos/sacredrelm_logo.png'
-import fincareLogo from '../../assets/logos/sacredrelm_logo.png'
-import ajioLogo from '../../assets/logos/sacredrelm_logo.png'
-import oneplusLogo from '../../assets/logos/sacredrelm_logo.png'
-import swiggyLogo from '../../assets/logos/sacredrelm_logo.png'
-import cars24Logo from '../../assets/logos/sacredrelm_logo.png'
-import zomatoLogo from '../../assets/logos/sacredrelm_logo.png'
-import acLogo from '../../assets/logos/sacredrelm_logo.png'
+import one from '../../assets/logos/sacredrelm.webp'
+import two from '../../assets/logos/beyond_slim.webp'
+import three from '../../assets/logos/camph_airr.webp'
+import four from '../../assets/logos/d-52_diabetes_care.webp'
+import five from '../../assets/logos/dr_alco_free.webp'
+import six from '../../assets/logos/drjoints.webp'
+import seven from '../../assets/logos/glowglaz.webp'
+import eight from '../../assets/logos/sampoorn_arogya.webp'
+import nine from '../../assets/logos/shilajit.webp'
+import ten from '../../assets/logos/sriastroveda.webp'
+
 
 
 
 const logos = [
-  meeshoLogo, fincareLogo, ajioLogo, oneplusLogo,
-  swiggyLogo, cars24Logo, zomatoLogo, acLogo,
-  // repeat again for infinite loop look
-  meeshoLogo, fincareLogo, ajioLogo, oneplusLogo,
-  swiggyLogo, cars24Logo, zomatoLogo, acLogo
+  one, two, three, four,
+  five, ten, six, seven, eight,
+  nine,
+  one, two, three, four,
+  five, ten, six, seven, eight,
+  nine
 ]
 
 const Hero = () => {
@@ -37,10 +41,10 @@ const Hero = () => {
         className="block md:hidden w-full h-full object-cover"
       />
       {/* Sliding logos at the bottom */}
-      <div className="absolute left-0 right-0 bottom-0 py-4 marquee bg-white">
+      <div className="absolute left-0 right-0 bottom-0 py-4 marquee ">
         <div className="marquee-content items-center">
           {logos.map((logo, idx) => (
-            <img key={idx} src={logo} alt="Partner Logo" className="h-8 md:h-20 mx-6 grayscale" />
+            <img key={idx} src={logo} alt="Partner Logo" className="h-16 md:h-20 mx-6 " />
           ))}
         </div>
       </div>

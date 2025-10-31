@@ -29,16 +29,16 @@ const Footer = () => {
               <span className="font-bold text-yellow-300 underline">isnnetworkpvtltd@gmail.com</span>
             </span>
             <div className="flex space-x-4 mt-2">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
+              <a href="https://www.facebook.com/profile.php?id=61583247412146" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
                 <FaFacebookF className="h-6 w-6" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
+              <a href="https://www.instagram.com/israelitesshoppingnetwork" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
                 <FaInstagram className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
+              <a href="https://www.linkedin.com/in/israelites-shopping-network-400386395" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
                 <FaLinkedinIn className="h-6 w-6" />
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
+              <a href="https://x.com/IsraelitesISN" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">
                 <FaXTwitter className="h-6 w-6" />
               </a>
             </div>
